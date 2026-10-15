@@ -1,0 +1,147 @@
+[
+  {
+    "table": "Access to safe water",
+    "rows": 2091,
+    "columns": [
+      "Indicator",
+      "GeoAreaCode",
+      "GeoAreaName",
+      "Year",
+      "Access_Percentage",
+      "Time_Detail",
+      "TimeCoverage",
+      "UpperBound",
+      "LowerBound",
+      "BasePeriod",
+      "Source",
+      "GeoInfoUrl",
+      "FootNote",
+      "Location",
+      "Nature",
+      "Reporting Type",
+      "Units"
+    ]
+  },
+  {
+    "table": "Calculations",
+    "rows": 1,
+    "columns": [
+      "Column"
+    ]
+  },
+  {
+    "table": "CountryTable",
+    "rows": 44,
+    "columns": [
+      "Country"
+    ]
+  },
+  {
+    "table": "Data",
+    "rows": 269,
+    "columns": [
+      "Data Source",
+      "World Development Indicators",
+      "Column3",
+      "Column4",
+      "Column5",
+      "Column6",
+      "Column7",
+      "Column8",
+      "Column9",
+      "Column10",
+      "Column11",
+      "Column12",
+      "Column13",
+      "Column14",
+      "Column15",
+      "Column16",
+      "Column17",
+      "Column18",
+      "Column19",
+      "Column20",
+      "Column21",
+      "Column22",
+      "Column23",
+      "Column24",
+      "Column25",
+      "Column26",
+      "Column27",
+      "Column28",
+      "Column29",
+      "Column30",
+      "Column31",
+      "Column32",
+      "Column33",
+      "Column34",
+      "Column35",
+      "Column36",
+      "Column37",
+      "Column38",
+      "Column39",
+      "Column40",
+      "Column41",
+      "Column42",
+      "Column43",
+      "Column44",
+      "Column45",
+      "Column46",
+      "Column47",
+      "Column48",
+      "Column49",
+      "Column50",
+      "Column51",
+      "Column52",
+      "Column53",
+      "Column54",
+      "Column55",
+      "Column56",
+      "Column57",
+      "Column58",
+      "Column59",
+      "Column60",
+      "Column61",
+      "Column62",
+      "Column63",
+      "Column64",
+      "Column65",
+      "Column66",
+      "Column67",
+      "Column68",
+      "Column69"
+    ]
+  },
+  {
+    "table": "GDP African countries",
+    "rows": 1068,
+    "columns": [
+      "Country",
+      "Year",
+      "GDP per capita (US$)"
+    ]
+  },
+  {
+    "table": "Health index Africa",
+    "rows": 350,
+    "columns": [
+      "SeriesDescription",
+      "GeoAreaName",
+      "Year",
+      "Health index Africa"
+    ]
+  },
+  {
+    "table": "Table Africa Countries",
+    "rows": 51,
+    "columns": [
+      "Table Africa Countries"
+    ]
+  },
+  {
+    "table": "YearTable",
+    "rows": 25,
+    "columns": [
+      "Year"
+    ]
+  }
+]

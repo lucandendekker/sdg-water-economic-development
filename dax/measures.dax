@@ -1,0 +1,69 @@
+// Table: Access to safe water
+// Measure: Water Access (% of population)
+Water Access (% of population) =
+DIVIDE(AVERAGE('Access to safe water'[Access_Percentage]), 100)
+
+// Table: Calculations
+// Measure: Selected Year
+Selected Year =
+VAR y = SELECTEDVALUE('Access to safe water'[Year])
+RETURN IF(NOT ISBLANK(y), y, MAX('Access to safe water'[Year]))
+
+// Table: Calculations
+// Measure: Avg_Access
+Avg_Access =
+DIVIDE(AVERAGE('Access to safe water'[Access_Percentage]),100)
+
+// Table: Calculations
+// Measure: Change_Previous_Year
+Change_Previous_Year =
+VAR ySel =
+    SELECTEDVALUE ( 'YearTable'[Year] )
+VAR yCurrent =
+    IF ( NOT ISBLANK ( ySel ),
+        ySel,
+        CALCULATE ( MAX ( 'Access to safe water'[Year] ) )
+    )
+VAR PrevY =
+    CALCULATE (
+        MAX ( 'Access to safe water'[Year] ),
+        REMOVEFILTERS ( 'YearTable' ),
+        FILTER ( ALL ( 'Access to safe water'[Year] ),
+                 'Access to safe water'[Year] < yCurrent )
+    )
+VAR CurrVal =
+    CALCULATE (
+        AVERAGE ( 'Access to safe water'[Access_Percentage] ),
+        REMOVEFILTERS ( 'YearTable' ),
+        'Access to safe water'[Year] = yCurrent
+    )
+VAR PrevVal =
+    CALCULATE (
+        AVERAGE ( 'Access to safe water'[Access_Percentage] ),
+        REMOVEFILTERS ( 'YearTable' ),
+        'Access to safe water'[Year] = PrevY
+    )
+RETURN
+IF (
+    ISBLANK ( PrevY ) || ISBLANK ( CurrVal ) || ISBLANK ( PrevVal ) || PrevVal = 0,
+    BLANK (),
+    DIVIDE ( CurrVal - PrevVal, PrevVal )
+)
+
+// Table: Calculations
+// Measure: Min_Access
+Min_Access =
+VAR v = MIN ( 'Access to safe water'[Access_Percentage] )
+RETURN IF ( ISBLANK(v), BLANK(), v / 100 )
+
+// Table: Calculations
+// Measure: Max_Access
+Max_Access =
+VAR v = MAX ( 'Access to safe water'[Access_Percentage] )
+RETURN IF ( ISBLANK(v), BLANK(), v / 100 )
+
+// Table: Calculations
+// Measure: StdDev_Access
+StdDev_Access =
+VAR v = STDEV.P ( 'Access to safe water'[Access_Percentage] )
+RETURN IF ( ISBLANK(v), BLANK(), v / 100 )

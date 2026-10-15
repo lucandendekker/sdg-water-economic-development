@@ -1,0 +1,4 @@
+*.pbix binary
+*.png binary
+*.pq text eol=lf
+*.dax text eol=lf
